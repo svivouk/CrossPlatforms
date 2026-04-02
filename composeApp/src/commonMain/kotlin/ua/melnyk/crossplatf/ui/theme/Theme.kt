@@ -5,9 +5,13 @@ import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.darkColorScheme
 import androidx.compose.material3.lightColorScheme
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.CompositionLocalProvider
+import androidx.compose.runtime.compositionLocalOf
 import androidx.compose.runtime.remember
+import androidx.compose.ui.unit.Dp
+import androidx.compose.ui.unit.dp
 import crossplatf.composeapp.generated.resources.Res
-import crossplatf.composeapp.generated.resources.honk
+import crossplatf.composeapp.generated.resources.MainFont
 import org.jetbrains.compose.resources.Font
 
 private val lightScheme = lightColorScheme(
@@ -238,6 +242,7 @@ private val highContrastDarkColorScheme = darkColorScheme(
     surfaceContainerHighest = surfaceContainerHighestDarkHighContrast,
 )
 
+
 @Composable
 fun AppTheme(
     darkTheme: Boolean = isSystemInDarkTheme(),
@@ -247,9 +252,8 @@ fun AppTheme(
         darkTheme -> darkScheme
         else -> lightScheme
     }
-    val honkFont = Font(Res.font.honk)
+    val honkFont = Font(Res.font.MainFont)
     val appTypography = remember { getTypography(honkFont) }
-
     MaterialTheme(
         colorScheme = colorScheme,
         typography = appTypography,

@@ -1,4 +1,4 @@
-package ua.melnyk.crossplatf
+package ua.melnyk.crossplatf.data.timezones
 
 interface TimeZoneHelper {
     fun getTimeZoneStrings(): List<String>

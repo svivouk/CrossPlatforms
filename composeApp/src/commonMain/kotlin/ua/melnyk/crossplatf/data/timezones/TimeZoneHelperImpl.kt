@@ -1,4 +1,4 @@
-package ua.melnyk.crossplatf
+package ua.melnyk.crossplatf.data.timezones
 
 import co.touchlab.kermit.Logger
 import kotlinx.datetime.LocalDateTime
